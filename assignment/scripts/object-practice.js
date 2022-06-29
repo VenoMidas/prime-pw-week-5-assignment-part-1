@@ -10,7 +10,13 @@ console.log('***** Object Practice *****')
 */
 const me = {
   // TODO - add properties here
+  firstName: 'Mark',
+  lastName: 'Schumacher',
+  hasSiblings: false,
+  shoeCount: 2,
+  favThreeFoods: ['egg roll', 'ribs', 'pizza'],
 };
+
 console.log('A little about me:', me);
 
 /* 2. Accessing object properties.
@@ -20,13 +26,20 @@ console.log('A little about me:', me);
   - Console.log fullName
 */
 
-
+let fullName = me.firstName + ' ' + me.lastName;
+console.log(fullName);
 
 /* 3. Nested arrays
   - Console.log your first favorite food
   - Console.log your last favorite food 
 */
 
+console.log('My favorite foods are:', me.favThreeFoods);
+console.log('My first favorite food is:', me.favThreeFoods[0]);
+// Even though the array is only 3 foods, I used .length-1 to access the 'last' item 
+// instead of me.favThreeFoods[2] which won't be the last item if the array ever gets
+// items added or removed.
+console.log('My last favorite food is:', me.favThreeFoods[me.favThreeFoods.length-1]);
 
 
 /* 4. Change a property of an existing object.
