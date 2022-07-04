@@ -19,6 +19,13 @@ const me = {
 
 console.log('A little about me:', me);
 
+function aboutMe(object) {
+  object = me;
+  const aboutMe = document.getElementById('about-me');
+  aboutMe.innerHTML = '';
+  aboutMe.innerHTML = `About Me <h3>First Name: ${object.firstName}</h3> <h3>Last Name: ${object.lastName}</h3> <h4>Has Siblings: ${object.hasSiblings}</h4> <h4>Shoe Count: ${object.shoeCount}</h4?> <h4>Favorite Foods: ${object.favThreeFoods}</h4>`;
+}
+
 /* 2. Accessing object properties.
   - Create a variable called fullName 
   - Use the firstName & lastName properties of the object you 
