@@ -125,3 +125,21 @@ function decreaseShoeCount() {
 
 me.favoriteColor = 'blue';
 console.log('This is me with a favorite color added:', me);
+
+/**
+ * Update favorite color with text input
+ */
+function changeFavoriteColor() {
+  me.favoriteColor = document.getElementById('color-input').value;
+  displayFavoriteColor();
+}
+
+/**
+ * Display favorite color
+ */
+function displayFavoriteColor() {
+  const favColorDisplay = document.getElementById('favorite-color-display');
+  favColorDisplay.innerHTML = `My favorite color: ${me.favoriteColor}`;
+}
+
+displayFavoriteColor();
