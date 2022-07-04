@@ -19,9 +19,13 @@ const me = {
 
 console.log('A little about me:', me);
 
+/**
+ * Displays content of object
+ * 
+ * @param {object} object - is for object with firstName, lastName, hasSiblings, shoeCount, and favThreeFoods.
+ */
 function aboutMe(object) {
   const aboutMe = document.getElementById('about-me');
-  aboutMe.innerHTML = '';
   aboutMe.innerHTML = `<h3>First Name: ${object.firstName}</h3> <h3>Last Name: ${object.lastName}</h3> <h4>Has Siblings: ${object.hasSiblings}</h4> <h4>Shoe Count: ${object.shoeCount}</h4?> <h4>Favorite Foods: ${object.favThreeFoods}</h4>`;
 }
 
@@ -29,6 +33,11 @@ function aboutMe(object) {
 // for...in iterates over properties of objects
 // something about this can inherit properties of their prototype
 // i stopped digging there, more to learn about prototypes someday
+/**
+ * Displays objects parameters and values
+ * 
+ * @param {object} object - is for an object
+ */
 function aboutMeLoop(object) {
   const aboutMeLoop = document.getElementById('about-me-loop');
   aboutMeLoop.innerHTML = '';
@@ -47,8 +56,15 @@ function aboutMeLoop(object) {
 let fullName = me.firstName + ' ' + me.lastName;
 console.log('My full name is:', fullName);
 
-
-
+/**
+ * Display value of input variable 
+ * 
+ * @param {any} nameVar - is for a variable (can be string, bool, number)
+ */
+function fullNameDisplay(nameVar) {
+  const fullName = document.getElementById('full-name');
+  fullName.innerHTML = nameVar
+}
 
 /* 3. Nested arrays
   - Console.log your first favorite food
