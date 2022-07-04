@@ -89,6 +89,33 @@ console.log('My current shoe count is:', me.shoeCount);
 me.shoeCount += 1; 
 console.log('My updated shoe count is:', me.shoeCount);
 
+/**
+ * Display shoe count on the DOM
+ */
+function displayShoeCount() {
+  const shoeCount = document.getElementById('shoe-count');
+  shoeCount.innerHTML = `Shoe Count: ${me.shoeCount}`;
+}
+
+// had to move the script to run after the HTML is created to is has something to target.
+// I know we talked about this, can't remember if we talked about any other options like a wait or async something to hold this if the script ran in the head.
+displayShoeCount();
+
+/**
+ * Increase shoe count and run displayShoeCount
+ */
+function increaseShoeCount() {
+  me.shoeCount += 1;
+  displayShoeCount();
+}
+
+/**
+ * Decrease shoe count and run displayShoeCount
+ */
+function decreaseShoeCount() {
+  me.shoeCount -=1;
+  displayShoeCount();
+}
 /* 5. Add a new property to an existing object.
   - Add a 'favoriteColor' to your existing object
   - Do this the same way you updated the variable above
