@@ -20,10 +20,21 @@ const me = {
 console.log('A little about me:', me);
 
 function aboutMe(object) {
-  object = me;
   const aboutMe = document.getElementById('about-me');
   aboutMe.innerHTML = '';
-  aboutMe.innerHTML = `About Me <h3>First Name: ${object.firstName}</h3> <h3>Last Name: ${object.lastName}</h3> <h4>Has Siblings: ${object.hasSiblings}</h4> <h4>Shoe Count: ${object.shoeCount}</h4?> <h4>Favorite Foods: ${object.favThreeFoods}</h4>`;
+  aboutMe.innerHTML = `<h3>First Name: ${object.firstName}</h3> <h3>Last Name: ${object.lastName}</h3> <h4>Has Siblings: ${object.hasSiblings}</h4> <h4>Shoe Count: ${object.shoeCount}</h4?> <h4>Favorite Foods: ${object.favThreeFoods}</h4>`;
+}
+
+// for...of returns not iterable
+// for...in iterates over properties of objects
+// something about this can inherit properties of their prototype
+// i stopped digging there, more to learn about prototypes someday
+function aboutMeLoop(object) {
+  const aboutMeLoop = document.getElementById('about-me-loop');
+  aboutMeLoop.innerHTML = '';
+  for (let prop in object) {
+    aboutMeLoop.innerHTML += `<h2>${prop}: ${object[prop]}</h2>`
+  }
 }
 
 /* 2. Accessing object properties.
@@ -35,6 +46,9 @@ function aboutMe(object) {
 
 let fullName = me.firstName + ' ' + me.lastName;
 console.log('My full name is:', fullName);
+
+
+
 
 /* 3. Nested arrays
   - Console.log your first favorite food
